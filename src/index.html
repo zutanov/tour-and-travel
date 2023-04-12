@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style/style.min.css">
     <title>Travel</title>
 </head>
@@ -28,30 +29,36 @@
             </nav>
         </div>
     </header>
-    <div class="main">
+    <main>
         <section class="hero">
             <div class="container hero__container">
                 <div class="hero__content">
                     <h1 class="title hero__title">Explore and <br> Travel</h1>
                     <form class="form">
                         <h4 class="form__subtitle"><span>Holiday finder</span></h4>
-                        <div class="form__top">
+                        <div class="form__block">
                             <div class="form__wrapper">
                                 <select class="form__select">
                                     <option value="location">Location</option>
                                 </select>
                             </div>
-                            <select class="form__select">
-                                <option value="activity">Activity</option>
-                            </select>
+                            <div class="form__wrapper">
+                                <select class="form__select">
+                                    <option value="location">Activity</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form__bottom">
-                            <select class="form__select">
-                                <option value="grade">Grade</option>
-                            </select>
-                            <select class="form__select">
-                                <option value="date">Date</option>
-                            </select> 
+                        <div class="form__block">
+                            <div class="form__wrapper">
+                                <select class="form__select">
+                                    <option value="location">Grade</option>
+                                </select>
+                            </div>
+                            <div class="form__wrapper">
+                                <select class="form__select">
+                                    <option value="location">Date</option>
+                                </select>
+                            </div>
                         </div>
                         <button class="btn hero__btn">Explore</button>
                         <div class="hero__plus">
@@ -124,6 +131,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="destination__plus">
+                    <img src="icons/plus.svg" alt="plus">
+                </div>
                 <div class="destination__ring">
                     <img src="icons/ring.svg" alt="ring">
                 </div>
@@ -132,6 +142,190 @@
                 </div>
             </div>
         </section>
-    </div>
+        <section class="guide">
+            <div class="container guide__container">
+                <div class="guide__plus">
+                    <img src="icons/plus.svg" alt="plus">
+                </div>
+                <div class="guide__plus-small">
+                    <img src="icons/plus.svg" alt="plus">
+                </div>
+                <div class="guide__content">
+                    <h2 class="title guide__title">Guides by Thousand 
+                        Sunny</h2>
+                    <p class="desc guide__desc">
+                        Packed with tips and advice from our on-the-ground experts, our city guides app (iOS and Android) is the ultimate resource before and during a trip.
+                      </p>
+                    <div class="guide__ring">
+                        <img src="icons/ring.svg" alt="">
+                    </div>
+                    <button class="btn guide__btn">Download</button>
+                </div>
+                <div class="guide__bg"></div>
+            </div>
+        </section>
+        <section class="testimonial">
+            <div class="container testimonial__container">
+                <div class="testimonial__ring">
+                    <img src="icons/ring.svg" alt="ring">
+                </div>
+                <h2 class="title testimonial__title">Testimonials</h2>
+                <div class="testimonial__block">
+                    <div class="testimonial__content">
+                        <div class="testimonial__raiting">
+                            <img class="testimonial__star" src="icons/star.svg" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" alt="star">
+                        </div>
+                        <p class="testimonial__text">
+                            “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec”
+                        </p>
+                        <div class="testimonial__author">Edward Newgate</div>
+                        <div class="testimonial__founder">Founder Circle</div>
+                    </div>
+                    <div class="testimonial__image">
+                        <img src="images/testimonial.png" alt="testimonial">
+                        <div class="testimonial__wrapper">
+                            <div class="testimonial__pointer testimonial__pointer-prev"></div>
+                            <div class="testimonial__pointer testimonial__pointer-next"></div>
+                        </div>
+                        <div class="testimonial__ring-large">
+                            <img src="icons/ring.svg" alt="ring">
+                        </div>
+                        <div class="testimonial__plus">
+                            <img src="icons/plus.svg" alt="plus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="story">
+            <div class="container">
+                <div class="story__header">
+                    <h2 class="title story__title">Trending stories</h2>
+                    <h5 class="story__view"><span>View all</span></h5>
+                </div>
+                <div class="story__plus">
+                    <img src="icons/plus.svg" alt="plus">
+                </div>
+                <div class="story__ring">
+                    <img src="icons/ring.svg" alt="ring">
+                </div>
+                <div class="story__ring-bottom">
+                    <img src="icons/ring.svg" alt="ring">
+                </div>
+                <div class="story__cards">
+                    <div class="story__card">
+                        <div class="story__card-img">
+                            <img src="images/story/story_card1.png" alt="">
+                        </div>
+                        <h4 class="story__card-title">The many benefits of  
+                            taking a healing holiday</h4>
+                        <p class="story__card-desc">
+                            ‘Helaing holidays’ are on the rise 
+                            tohelp maximise your health and happines...
+                        </p>
+                        <a href="#" class="story__card-link">Read more</a>
+                    </div>
+                    <div class="story__card">
+                        <div class="story__card-img">
+                            <img src="images/story/story_card2.png" alt="">
+                        </div>
+                        <h4 class="story__card-title">The best Kyoto restaurant
+                            to try Japanese foody</h4>
+                        <p class="story__card-desc">
+                            From tofu to teahouses, here’s our guide to Kyoto’s best restaurants
+                            to visit...
+                        </p>
+                        <a href="#" class="story__card-link">Read more</a>
+                    </div>
+                    <div class="story__card">
+                        <div class="story__card-img">
+                            <img src="images/story/story_card3.png" alt="">
+                        </div>
+                        <h4 class="story__card-title">Skip Chichen Itza and head
+                            to this remote Yucatan</h4>
+                        <p class="story__card-desc">
+                            It’s remote and challenging to get,
+                            but braving the jungle and exploring
+                            these ruins without the...
+                        </p>
+                        <a href="#" class="story__card-link">Read more</a>
+                    </div>
+                    <div class="story__card">
+                        <div class="story__card-img">
+                            <img src="images/story/story_card4.png" alt="">
+                        </div>
+                        <h4 class="story__card-title">Surf’s up at these beginner
+                            spots around the world</h4>
+                        <p class="story__card-desc">
+                            If learning to surf has in on your to-
+                            do list for a while, the good news
+                            is: it’s never too late...
+                        </p>
+                        <a href="#" class="story__card-link">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="logo">
+                        <img src="icons/logo.svg" alt="logo">
+                    </div>
+                    <p class="footer__desc">
+                        Plan and book your perfect trip with 
+    expert advice, travel tips destination
+    information from us
+                    </p>
+                    <p class="footer__rights">
+                        ©2020 Thousand Sunny. All rights reserved
+                    </p>
+                </div>
+                <div class="footer__block">
+                    <h6 class="footer__title">Destinations</h6>
+                    <ul>
+                        <li class="footer__item">Africa</li>
+                        <li class="footer__item">Antarctica</li>
+                        <li class="footer__item">Asia</li>
+                        <li class="footer__item">Europe</li>
+                        <li class="footer__item">America</li>
+                    </ul>
+                </div>
+                <div class="footer__block">
+                    <h6 class="footer__title">Shop</h6>
+                    <ul>
+                        <li class="footer__item">Destination Guides</li>
+                        <li class="footer__item">Pictorial & Gifts</li>
+                        <li class="footer__item">Special Offers</li>
+                        <li class="footer__item">Delivery Times</li>
+                        <li class="footer__item">FAQs</li>
+                    </ul>
+                </div>
+                <div class="footer__block">
+                    <h6 class="footer__title">Interests</h6>
+                    <ul>
+                        <li class="footer__item">Adventure Travel</li>
+                        <li class="footer__item">Art And Culture</li>
+                        <li class="footer__item">Wildlife And Nature</li>
+                        <li class="footer__item">Family Holidays</li>
+                        <li class="footer__item">Food And Drink</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__icons">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
