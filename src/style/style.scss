@@ -11,6 +11,7 @@ $colorSunrise: #FB8F1D;
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 * {
@@ -20,11 +21,17 @@ a {
 
 button {
     font-family: 'Inter';
-    background: none;
     border: none;
     background: $colorSunrise;
     color: #ffffff;
     border-radius: 8px;
+    transition: 0.8s;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid $colorSunrise;
+        background: none;
+        color: $colorSunrise;
+    }
 }
 
 .container {
@@ -50,7 +57,11 @@ button {
 }
 
 .header {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
     height: 60px;
+    margin: 0 auto;
     nav {
         margin-top: 35px;
         padding: 8px 0;
@@ -68,16 +79,14 @@ button {
         line-height: 19px;
         color: #B8BECD;
         margin-right: 34px;
-        &_active {
+        transition: 0.8s;
+        &:hover {
             font-weight: 500;
             color: #202336;
         }
     }
     &__auth {
         :first-child{
-            border: 1px solid $colorSunrise;
-            background: none;
-            color: $colorSunrise;
             margin-right: 18px;
         }
     }  
@@ -90,18 +99,26 @@ button {
 }
 
 .hero {
+    padding-top: 60px;
     &__container {
-        display: flex;
-        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     &__content {
-        position: relative;
         padding: 105px 0 47px;
     }
     &__title {
+        width: 356px;
         font-size: 64px;
         line-height: 80px;
         color: #202336;
+        position: relative;
+        &::after {
+            content: url(../icons/plus.svg);
+            position: absolute;
+            top: -27px;
+            right: -131px;
+        }
     }
     .form {
         margin-top: 74px;
@@ -120,12 +137,22 @@ button {
                 width: 32px;
                 border: 1px solid #202336;
             }
+            &::after {
+                content: '';
+                background: url('../icons/ring.svg') center/cover no-repeat;
+                height: 26px;
+                width: 26px;
+                position: absolute;
+                left: -85px;
+                top: 60px;
+            }
         }
         &__block {
             display: flex;
             margin-bottom: 35px;
         }
         &__wrapper {
+            cursor: pointer;
             position: relative;
             width: 220px;
             &:not(:last-child) {
@@ -146,6 +173,7 @@ button {
             }
         }
         &__select {
+            cursor: pointer;
             width: 100%;
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -159,6 +187,9 @@ button {
             font-weight: 400;
             color: #4A4C53;
             font-size: 15px;
+            &:hover {
+                border: 2px solid  #AFB0B9;
+            }
         }
     }
     &__btn {
@@ -169,66 +200,52 @@ button {
         font-weight: 700;
         font-size: 17px;
     }
-    &__plus {
-        height: 21px;
-        position: absolute;
-        top: 125px;
-        left: 466px;
-    }
-    &__ring {
-        height: 20px;
-        position: absolute;
-        left: 542px;
-        bottom: 18px;
-        &-large {
-            position: absolute;
-            top: 399px;
-            left: -85px;
-            img {
-                height: 26px;
-                width: 26px;
-            }
-        }
-    }
     &__bg {
         margin-top: 72px;
-        width: 687px;
-        height: 654px;
-        position: absolute;
-        right: -85px;
-        z-index: -1;
-        background: url('../images/hero_bg.png');
+        background: url('../images/hero_bg.png') center/contain no-repeat;
+        position: relative;
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: -68px;
+            bottom: 15px;
+        }
     }
 }
 
 .explore {
-    margin-top: 270px;
+    padding-top: 270px;
     &__container {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         position: relative;
     }
     &__bg {
-        position: absolute;
-        left: -50px;
         height: 534px;
         width: 659px;
-        z-index: -1;
         background: url('../images/explore_bg.png') no-repeat;
-    }
-    &__plus {
-        height: 21px;
-        position: absolute;
-        left: 636px;
-        transform: rotate(7.49deg);
+        position: relative;
+        &::after {
+            content: url(../icons/plus.svg);
+            transform: rotate(7.49deg);
+            position: absolute;
+            top: 0px;
+            right: 12px;
+        }
     }
     &__content {
-        position: relative;
         padding: 111px 58px 111px 0;
         width: 440px;
     }
     &__desc {
         margin: 20px 0 39px;
+        position: relative;
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            right: 45px;
+            bottom: -54px;
+        }
     }
     &__btn {
         width: 164px;
@@ -236,17 +253,10 @@ button {
         font-weight: 600;
         font-size: 16px;
     }
-    &__ring {
-        height: 20px;
-        position: absolute;
-        right: 103px;
-        bottom: 152px;
-    }
 }
 
 .destination {
-    margin-top: 262px;
-    padding:30px 0 59px;
+    padding: 292px 0 59px;
     .container {
         max-width: 1120px;
         position: relative;
@@ -257,8 +267,15 @@ button {
         align-items:center;
         height: 50px;
         margin-bottom: 56px;
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            right: 221px;
+            top: -30px;
+        }
     }
     &__view {
+        cursor: pointer;
         margin-right: 15px;
         font-weight: 600;
         font-size: 17px;
@@ -275,12 +292,29 @@ button {
             border-left:2px solid $colorSunrise;
             transform: rotate(135deg);
         }
+        :hover{
+            transition: 0.8s;
+            font-size: 19px;
+        }
     }
     &__cards {
         display: grid;
         grid-template-columns: repeat(4, 261px);
         grid-template-rows: 337px;
         column-gap: 25px;
+        position: relative;
+        &::before {
+            content: url(../icons/plus.svg);
+            position: absolute;
+            top: 192px;
+            left: -105px;
+        }
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: 463px;
+            bottom: -55px;
+        }
     }
     &__card {
         position: relative;
@@ -312,49 +346,54 @@ button {
             line-height: 24px;
             color: #80918E;
         }
-    }
-    &__ring {
-        height: 20px;
-        position: absolute;
-        top: -30px;
-        right: 221px;
-        &-bottom {
-            height: 20px;
-            position: absolute;
-            bottom: -51px;
-            right: 647px;
-        }
-    }
-    &__plus {
-        position: absolute;
-        bottom: 121px;
-        left: -95px;
-    }
-    
+    }  
 }
 
 .guide {
-    margin-top: 173px;
+    padding-top: 173px;
     &__container {
         display: flex;
-        justify-content: flex-start;
-        position: relative;
+        justify-content: space-between;
     }
     &__bg {
-        position: absolute;
-        right: 41px;
         height: 542px;
         width: 599px;
-        z-index: -1;
         background: url('../images/guide_bg.png') no-repeat;
+        position: relative;
+        &::before {
+            content: '';
+            background: url('../icons/plus.svg') center/cover no-repeat;
+            position: absolute  ;
+            height: 16px;
+            width: 16px;
+            right: -27px;
+            top: 37px;
+            transform: rotate(9.99deg);
+        }
     }
     &__content {
-        position: relative;
         padding: 152px 0 93px 49px;
         width: 450px;
     }
+    &__title {
+        position: relative;
+        &::before {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: 45px;
+            top: -87px;
+        }
+    }
     &__desc {
         margin: 20px 0 39px;
+        position: relative;
+        &::after {
+            content: url(../icons/plus.svg);
+            transform: rotate(20.42deg);
+            position: absolute;
+            right: 24px;
+            bottom: -91px;
+        }
     }
     &__btn {
         width: 164px;
@@ -362,31 +401,10 @@ button {
         font-weight: 600;
         font-size: 16px;
     }
-    &__ring {
-        height: 20px;
-        position: absolute;
-        top: 85px;
-        left: 94px;
-    }
-    &__plus {
-        height: 21px;
-        position: absolute;
-        left: 465px;
-        bottom: 96px;
-        transform: rotate(20.42deg);
-        &-small {
-            position: absolute;
-            height: 16px;
-            width: 16px;
-            right: -17px;
-            top: 37px;
-            transform: rotate(9.99deg);
-        }
-    }
 }
 
 .testimonial {
-    margin-top: 248px;
+    padding-top: 248px;
     &__container {
         position: relative;
     }    
@@ -418,6 +436,13 @@ button {
         line-height: 36px;
         color: #000000;
         margin-bottom: 40px;
+        position: relative;
+        &::before {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: -132px;
+            top: 40px;
+        }
     }
     &__author {
         font-weight: 700;
@@ -437,6 +462,26 @@ button {
         height: 491px;
         img {
             border-radius: 14px 14px 0 0;
+        }
+        &::before {
+            content:'';
+            z-index: -1;
+            background: url('../icons/ring.svg') center/cover no-repeat;
+            position: absolute;
+            top: -17px;
+            right: -18px;
+            width: 42px;
+            height: 42px;
+        }
+        &::after {
+            content:'';
+            background: url('../icons/plus.svg') center/cover no-repeat;
+            position: absolute;
+            width: 31.72px;
+            height: 31.64px;
+            bottom: -13px;
+            left: -12px;
+            transform: rotate(8.17deg);
         }
     }
     &__wrapper {
@@ -493,73 +538,31 @@ button {
             }
         }
     }
-    &__ring {
-        height: 20px;
-        position: absolute;
-        top: 299px;
-        left: -73px;
-        &-large {   
-        position: absolute;
-        top: -17px;
-        right: -18px;
-        width: 42px;
-        height: 42px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-        }
-    }
-    &__plus {
-        width: 31.72px;
-        height: 31.64px;
-        z-index: 1;
-        position: absolute;
-        bottom: -13px;
-        left: -12px;
-        transform: rotate(8.17deg);
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
 }
 
 .story {
     position: relative;
-    margin-top: 213px;
-    padding: 57px 0 75px;
+    padding: 270px 0 75px;
     .container {
         max-width: 1120px;
-        position: relative;
     }
-    &__plus {
-        position: absolute;
-        height: 21px;
-        top: -57px;
-        left: 453px;
-        transform: rotate(7.49deg);
-    }
-    &__ring {
-        position: absolute;
-        height: 20px;
-        left: -77px;
-        top: 368px;
-        &-bottom {
-            position: absolute;
-            height: 20px;
-            right: 365px;
-            bottom: -75px;
-        }
-    }
-    &__header {
+        &__header {
         display: flex;
         justify-content: space-between;
         align-items:center;
         height: 50px;
         margin-bottom: 56px;
+        position: relative;
+        &::before {
+            content: url(../icons/plus.svg);
+            position: absolute;
+            top: -57px;
+            left: 443px;
+            transform: rotate(7.49deg);
+        }
     }
     &__view {
+        cursor: pointer;
         margin-right: 15px;
         font-weight: 600;
         font-size: 17px;
@@ -576,12 +579,29 @@ button {
             border-left:2px solid $colorSunrise;
             transform: rotate(135deg);
         }
+        :hover{
+            transition: 0.8s;
+            font-size: 19px;
+        }
     }
     &__cards {
         display: grid;
         grid-template-columns: repeat(4, 261px);
         grid-template-rows: 446px;
         column-gap: 25px;
+        position: relative;
+        &::before {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            top: 262px;
+            left: -87px;        
+        }
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            bottom: -79px;
+            right: 355px;     
+        }
     }
     &__card {
         border-radius: 8px;
@@ -625,8 +645,9 @@ button {
         max-width: 1120px;
     }
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 391px repeat(3, 1fr);
+        gap: 75px;
         padding-bottom: 77px;
         border-bottom: 0.6px solid #C4C4C4;;
     }
@@ -667,13 +688,18 @@ button {
     }
     ul {
         list-style-type: none;
-        li {
-            font-family: 'Mulish';
-            font-size: 18px;
-            line-height: 38px;
-            color: #848484;
-            font-weight: 300;
-        }
+    }
+    &__item {
+        font-family: 'Mulish';
+        font-size: 18px;
+        line-height: 38px;
+        color: #848484;
+        font-weight: 300;
+        transition: 0.8s;
+        a:hover {
+            font-weight: 400;
+            color: $colorSunrise;
+        }            
     }
     &__icons {
         padding: 30px 0 32px;
@@ -681,7 +707,12 @@ button {
         vertical-align: bottom;
         font-size: 22px;
         .fa-brands {
+            cursor: pointer;
             margin-right: 35px;
+            &:hover {
+                transition: 0.2s;
+                color: rgb(3, 193, 121);
+            }
          }
          .fa-twitter {
             font-size: 20px;
