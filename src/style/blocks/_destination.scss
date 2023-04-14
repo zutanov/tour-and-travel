@@ -1,0 +1,93 @@
+.destination {
+    padding: 292px 0 59px;
+    .container {
+        max-width: 1120px;
+        position: relative;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        height: 50px;
+        margin-bottom: 56px;
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            right: 221px;
+            top: -30px;
+        }
+    }
+    &__view {
+        cursor: pointer;
+        margin-right: 15px;
+        font-weight: 600;
+        font-size: 17px;
+        color: $colorSunrise;
+        position: relative;
+        ::before {
+            content:"";
+            position: absolute;
+            bottom: 6px;
+            right: -11px;
+            height: 6px;
+            width: 6px;
+            border-top:2px solid $colorSunrise;
+            border-left:2px solid $colorSunrise;
+            transform: rotate(135deg);
+        }
+        :hover{
+            transition: 0.8s;
+            font-size: 19px;
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 261px);
+        grid-template-rows: 337px;
+        column-gap: 25px;
+        position: relative;
+        &::before {
+            content: url(../icons/plus.svg);
+            position: absolute;
+            top: 192px;
+            left: -105px;
+        }
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: 463px;
+            bottom: -55px;
+        }
+    }
+    &__card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &-name {
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 120px;
+            height: 56px;
+            padding: 11px 0 5px;
+            background: #FFFFFF;
+            border-radius: 0px 6px 0px 0px;
+        }
+        &-place {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 25px;
+            color: #042521;
+        }
+        &-country {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 24px;
+            color: #80918E;
+        }
+    }  
+}
