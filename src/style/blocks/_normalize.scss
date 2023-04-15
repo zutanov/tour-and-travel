@@ -1,0 +1,39 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: 'Inter';
+    border: none;
+    background: $colorSunrise;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: 0.8s;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid $colorSunrise;
+        background: none;
+        color: $colorSunrise;
+    }
+}
+
+.container {
+    max-width: 1240px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
