@@ -7,7 +7,7 @@
     &__bg {
         height: 542px;
         width: 599px;
-        background: url('../images/guide_bg.png') no-repeat;
+        background: url('../images/guide_bg.png') center/contain no-repeat;
         position: relative;
         &::before {
             content: '';

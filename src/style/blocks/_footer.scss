@@ -68,7 +68,9 @@
         font-size: 22px;
         .fa-brands {
             cursor: pointer;
-            margin-right: 35px;
+            &:not(:last-child) {
+                margin-right: 35px;
+            }
             &:hover {
                 transition: 0.2s;
                 color: rgb(3, 193, 121);
