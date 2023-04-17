@@ -14,23 +14,26 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <img src="icons/logo.svg" alt="logo">
+                    <a href="#hero"><img src="icons/logo.svg"  width="44" height="44" alt="logo"></a>
                 </div>
                 <div class="header__nav">
-                    <a href="#" class="header__link">Home</a>
+                    <a href="#hero" class="header__link">Home</a>
                     <a href="#destination" class="header__link">Destinations</a>
                     <a href="#guide" class="header__link">About</a>
-                    <a href="#testimonial" class="header__link">Partner</a>
+                    <a href="#footer" class="header__link">Partner</a>
                     <div class="header__auth">
                         <button class="btn header__btn">Login</button>
                         <button class="btn header__btn">Register</button>
                     </div>
                 </div>
+                <div class="header__menu">
+                    <div class="burger"></div>
+                </div>
             </nav>
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="container hero__container">
                 <div class="hero__content">
                     <h1 class="title hero__title">Explore and Travel</h1>
@@ -47,8 +50,6 @@
                                     <option value="location">Activity</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="form__block">
                             <div class="form__wrapper">
                                 <select class="form__select">
                                     <option value="location">Grade</option>
@@ -88,28 +89,28 @@
                 </div>
                 <div class="destination__cards">
                     <div class="destination__card">
-                        <img src="images/destination/indonesia.png" alt="Raja Ampat">
+                        <img src="images/destination/indonesia.webp" alt="Raja Ampat">
                         <div class="destination__card-name">
                             <div class="destination__card-place">Raja Ampat</div>
                             <div class="destination__card-country">Indonesia</div>
                         </div>
                     </div>
                     <div class="destination__card">
-                        <img src="images/destination/china.png" alt="Fanjingshan">
+                        <img src="images/destination/china.webp" alt="Fanjingshan">
                         <div class="destination__card-name">
                             <div class="destination__card-place">Fanjingshan</div>
                             <div class="destination__card-country">China</div>
                         </div>
                     </div>
                     <div class="destination__card">
-                        <img src="images/destination/switzerland.png" alt="Vevey">
+                        <img src="images/destination/switzerland.webp" alt="Vevey">
                         <div class="destination__card-name">
                             <div class="destination__card-place">Vevey</div>
                             <div class="destination__card-country">Switzerland</div>
                         </div>
                     </div>
                     <div class="destination__card">
-                        <img src="images/destination/montenegro.png" alt="Skadar">
+                        <img src="images/destination/montenegro.webp" alt="Skadar">
                         <div class="destination__card-name">
                             <div class="destination__card-place">Skadar</div>
                             <div class="destination__card-country">Montenegro</div>
@@ -131,17 +132,17 @@
                 <div class="guide__bg"></div>
             </div>
         </section>
-        <section id="testimonial" class="testimonial">
+        <section class="testimonial">
             <div class="container testimonial__container">
                 <h2 class="title testimonial__title">Testimonials</h2>
                 <div class="testimonial__block">
                     <div class="testimonial__content">
                         <div class="testimonial__raiting">
-                            <img class="testimonial__star" src="icons/star.svg" alt="star">
-                            <img class="testimonial__star" src="icons/star.svg" alt="star">
-                            <img class="testimonial__star" src="icons/star.svg" alt="star">
-                            <img class="testimonial__star" src="icons/star.svg" alt="star">
-                            <img class="testimonial__star" src="icons/star.svg" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" width="26" height="24" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" width="26" height="24" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" width="26" height="24" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" width="26" height="24" alt="star">
+                            <img class="testimonial__star" src="icons/star.svg" width="26" height="24" alt="star">
                         </div>
                         <p class="testimonial__text">
                             “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec”
@@ -150,7 +151,7 @@
                         <div class="testimonial__founder">Founder Circle</div>
                     </div>
                     <div class="testimonial__image">
-                        <img src="images/testimonial.png" alt="testimonial">
+                        <img src="images/testimonial.webp" alt="testimonial">
                         <div class="testimonial__wrapper">
                             <div class="testimonial__pointer testimonial__pointer-prev"></div>
                             <div class="testimonial__pointer testimonial__pointer-next"></div>
@@ -168,7 +169,7 @@
                 <div class="story__cards">
                     <div class="story__card">
                         <div class="story__card-img">
-                            <img src="images/story/story_card1.png" alt="">
+                            <img src="images/story/story_card1.webp" alt="">
                         </div>
                         <h4 class="story__card-title">The many benefits of  
                             taking a healing holiday</h4>
@@ -180,7 +181,7 @@
                     </div>
                     <div class="story__card">
                         <div class="story__card-img">
-                            <img src="images/story/story_card2.png" alt="">
+                            <img src="images/story/story_card2.webp" alt="">
                         </div>
                         <h4 class="story__card-title">The best Kyoto restaurant
                             to try Japanese foody</h4>
@@ -192,7 +193,7 @@
                     </div>
                     <div class="story__card">
                         <div class="story__card-img">
-                            <img src="images/story/story_card3.png" alt="">
+                            <img src="images/story/story_card3.webp" alt="">
                         </div>
                         <h4 class="story__card-title">Skip Chichen Itza and head
                             to this remote Yucatan</h4>
@@ -205,7 +206,7 @@
                     </div>
                     <div class="story__card">
                         <div class="story__card-img">
-                            <img src="images/story/story_card4.png" alt="">
+                            <img src="images/story/story_card4.webp" alt="">
                         </div>
                         <h4 class="story__card-title">Surf’s up at these beginner
                             spots around the world</h4>
@@ -220,12 +221,12 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="container footer__container">
             <div class="footer__wrapper">
                 <div class="footer__content">
                     <div class="logo">
-                        <img src="icons/logo.svg" alt="logo">
+                        <a href="#hero"><img src="icons/logo.svg"  width="44" height="44" alt="logo"></a>
                     </div>
                     <p class="footer__desc">
                         Plan and book your perfect trip with 

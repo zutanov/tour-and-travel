@@ -1,0 +1,113 @@
+.hero {
+    padding-top: 60px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__content {
+        padding: 105px 0 47px;
+    }
+    &__title {
+        width: 356px;
+        font-size: 64px;
+        line-height: 80px;
+        color: #202336;
+        position: relative;
+        &::after {
+            content: url(../icons/plus.svg);
+            position: absolute;
+            top: -27px;
+            right: -131px;
+        }
+    }
+    .form {
+        margin-top: 74px;
+        &__subtitle {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            color: #202336;
+            margin-bottom: 71px;
+            position: relative;
+            span::before {
+                position: absolute;
+                content: "";
+                top: 48px;
+                left: 0;
+                width: 32px;
+                border: 1px solid #202336;
+            }
+            &::after {
+                content: '';
+                background: url('../icons/ring.svg') center/cover no-repeat;
+                height: 26px;
+                width: 26px;
+                position: absolute;
+                left: -85px;
+                top: 60px;
+            }
+        }
+        &__block {
+            display: grid;
+            grid-template-columns: repeat(2, 220px);
+            grid-template-rows: auto;
+            column-gap: 30px;
+            row-gap: 35px;
+        }
+        &__wrapper {
+            cursor: pointer;
+            position: relative;
+            &::before {
+                content:"";
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                right: 30.5px;
+                margin: auto 0;
+                width: 6px;
+                height: 6px;
+                border-top:2px solid #4A4C53;
+                border-left:2px solid #4A4C53;
+                transform: rotate(-135deg);
+            }
+        }
+        &__select {
+            cursor: pointer;
+            width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            height: 52px;
+            border: 0.8px solid #AFB0B9;
+            border-radius: 6px;
+            padding: 0 31px;
+            font-family: 'Inter';
+            font-weight: 400;
+            color: #4A4C53;
+            font-size: 15px;
+            &:hover {
+                border: 2px solid  #AFB0B9;
+            }
+        }
+    }
+    &__btn {
+        font-family: 'Mulish';
+        width: 180px;
+        height: 52px;
+        margin-top: 51px;
+        font-weight: 700;
+        font-size: 17px;
+    }
+    &__bg {
+        margin-top: 72px;
+        background: url('../images/hero_bg.webp') center/contain no-repeat;
+        position: relative;
+        &::after {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: -68px;
+            bottom: 15px;
+        }
+    }
+}
