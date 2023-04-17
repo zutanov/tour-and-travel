@@ -57,7 +57,11 @@ button {
 }
 
 .header {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
     height: 60px;
+    margin: 0 auto;
     nav {
         margin-top: 35px;
         padding: 8px 0;
@@ -95,6 +99,7 @@ button {
 }
 
 .hero {
+    padding-top: 60px;
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -182,6 +187,9 @@ button {
             font-weight: 400;
             color: #4A4C53;
             font-size: 15px;
+            &:hover {
+                border: 2px solid  #AFB0B9;
+            }
         }
     }
     &__btn {
@@ -206,7 +214,7 @@ button {
 }
 
 .explore {
-    margin-top: 270px;
+    padding-top: 270px;
     &__container {
         display: flex;
         justify-content: space-between;
@@ -248,8 +256,7 @@ button {
 }
 
 .destination {
-    margin-top: 262px;
-    padding:30px 0 59px;
+    padding: 292px 0 59px;
     .container {
         max-width: 1120px;
         position: relative;
@@ -343,7 +350,7 @@ button {
 }
 
 .guide {
-    margin-top: 173px;
+    padding-top: 173px;
     &__container {
         display: flex;
         justify-content: space-between;
@@ -397,7 +404,7 @@ button {
 }
 
 .testimonial {
-    margin-top: 248px;
+    padding-top: 248px;
     &__container {
         position: relative;
     }    
@@ -535,8 +542,7 @@ button {
 
 .story {
     position: relative;
-    margin-top: 213px;
-    padding: 57px 0 75px;
+    padding: 270px 0 75px;
     .container {
         max-width: 1120px;
     }
@@ -701,6 +707,7 @@ button {
         vertical-align: bottom;
         font-size: 22px;
         .fa-brands {
+            cursor: pointer;
             margin-right: 35px;
             &:hover {
                 transition: 0.2s;
