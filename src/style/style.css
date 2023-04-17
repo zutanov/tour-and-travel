@@ -252,7 +252,7 @@ button:hover {
 
 .hero__bg {
   margin-top: 72px;
-  background: url("../images/hero_bg.png") center/contain no-repeat;
+  background: url("../images/hero_bg.webp") center/contain no-repeat;
   position: relative;
 }
 
@@ -276,7 +276,7 @@ button:hover {
 .explore__bg {
   height: 534px;
   width: 659px;
-  background: url("../images/explore_bg.png") center/contain no-repeat;
+  background: url("../images/explore_bg.webp") center/contain no-repeat;
   position: relative;
 }
 
@@ -432,7 +432,7 @@ button:hover {
 .guide__bg {
   height: 542px;
   width: 599px;
-  background: url("../images/guide_bg.png") center/contain no-repeat;
+  background: url("../images/guide_bg.webp") center/contain no-repeat;
   position: relative;
 }
 
