@@ -48,16 +48,15 @@
             }
         }
         &__block {
-            display: flex;
-            margin-bottom: 35px;
+            display: grid;
+            grid-template-columns: repeat(2, 220px);
+            grid-template-rows: auto;
+            column-gap: 30px;
+            row-gap: 35px;
         }
         &__wrapper {
             cursor: pointer;
             position: relative;
-            width: 220px;
-            &:not(:last-child) {
-                margin-right: 30px;
-            }
             &::before {
                 content:"";
                 position: absolute;
@@ -96,7 +95,7 @@
         font-family: 'Mulish';
         width: 180px;
         height: 52px;
-        margin-top: 16px;
+        margin-top: 51px;
         font-weight: 700;
         font-size: 17px;
     }
