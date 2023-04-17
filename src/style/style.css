@@ -194,11 +194,8 @@ button:hover {
 }
 
 .hero .form__block {
-  display: grid;
-  grid-template-columns: repeat(2, 220px);
-  grid-template-rows: auto;
-  column-gap: 30px;
-  row-gap: 35px;
+  display: flex;
+  margin-bottom: 35px;
 }
 
 .hero .form__wrapper {
