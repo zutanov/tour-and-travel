@@ -55,7 +55,7 @@ button:hover {
 }
 
 .header {
-  padding-top: 35px;
+  padding: 10px 0;
   z-index: 10;
   position: fixed;
   width: 100%;
