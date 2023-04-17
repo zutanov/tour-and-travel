@@ -1,0 +1,136 @@
+.testimonial {
+    padding-top: 248px;
+    &__container {
+        position: relative;
+    }    
+    &__title {
+        margin-bottom: 60px;
+        padding-left: 49px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        padding: 85px 0 100px 49px;
+    }
+    &__raiting {
+        margin-bottom: 30px;
+    }
+    &__star {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+    &__text {
+        width: 450px;
+        font-family: 'Mulish';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #000000;
+        margin-bottom: 40px;
+        position: relative;
+        &::before {
+            content: url(../icons/ring.svg);
+            position: absolute;
+            left: -132px;
+            top: 40px;
+        }
+    }
+    &__author {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 32px;
+    }
+    &__founder {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.85);
+        line-height: 32px;
+    }
+    &__image {
+        position: relative;
+        margin-right: 152px;
+        width: 384px;
+        height: 491px;
+        img {
+            border-radius: 14px 14px 0 0;
+        }
+        &::before {
+            content:'';
+            z-index: -1;
+            background: url('../icons/ring.svg') center/cover no-repeat;
+            position: absolute;
+            top: -17px;
+            right: -18px;
+            width: 42px;
+            height: 42px;
+        }
+        &::after {
+            content:'';
+            background: url('../icons/plus.svg') center/cover no-repeat;
+            position: absolute;
+            width: 31.72px;
+            height: 31.64px;
+            bottom: -13px;
+            left: -12px;
+            transform: rotate(8.17deg);
+        }
+    }
+    &__wrapper {
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        width: 132px;
+        background: #FFFFFF;
+        border-radius: 16px 0px 0px 0px;
+        display: flex;
+        justify-content:  space-between;
+        padding: 20px 0 0 30px;
+    }
+    &__pointer {
+        width: 38px;
+        height: 38px;
+        border-radius: 100%;
+        &-prev {
+            border: 2px solid #D7D7D7;
+            position: relative;
+            &::before {
+                content:'';
+                width: 5px;
+                height: 5px;
+                border-top: 2px solid #D7D7D7;
+                border-left: 2px solid #D7D7D7;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+        }
+        &-next {
+            border: 2px solid #000000;
+            position: relative;
+            &::before {
+                content:'';
+                width: 5px;
+                height: 5px;
+                border-top: 2px solid #000000;
+                border-left: 2px solid #000000;
+                transform: rotate(135deg);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+        }
+    }
+}
